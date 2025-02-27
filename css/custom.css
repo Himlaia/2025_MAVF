@@ -1,0 +1,81 @@
+/* ----- SECCIÓN A PANTALLA COMPLETA ----- */
+.full-screen-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la pantalla */
+    background: url('../img/foto5.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Capa oscura fija sobre la imagen para más dramatismo */
+.full-screen-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Más oscuro para resaltar texto */
+    z-index: 1;
+}
+
+/* Asegurar que el contenido esté por encima de la capa oscura */
+.full-screen-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Efecto de glitch para hacer más impactante el título */
+@keyframes glitch {
+    0% { text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.75), -2px -2px 5px rgba(0, 0, 255, 0.75); }
+    50% { text-shadow: -2px -2px 5px rgba(255, 0, 0, 0.75), 2px 2px 5px rgba(0, 0, 255, 0.75); }
+    100% { text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.75), -2px -2px 5px rgba(0, 0, 255, 0.75); }
+}
+
+/* Título en rojo con glitch y efecto de vibración sutil */
+.full-screen-title {
+    color: #9a0000 !important; /* Rojo intenso */
+    font-size: 3rem;
+    font-weight: bold;
+    animation: glitch 0.1s infinite alternate;
+}
+
+/* Subtítulo en blanco con un leve resplandor */
+.full-screen-subtitle {
+    color: #e8e8e8 !important; /* Blanco menos brillante */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+    opacity: 0.95;
+}
+
+.full-screen-small-text {
+    color: #e8e8e8 !important; /* Blanco puro */
+    font-size: 1rem;
+    font-style: italic;
+    animation: fadeBlink 2s infinite;
+    opacity: 0.8;
+}
+
+/* Animación de aparición para el contenido */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.full-screen-content {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Efecto Parallax para la imagen de fondo */
+.full-screen-section {
+    background-attachment: fixed;
+}
