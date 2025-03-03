@@ -1,6 +1,4 @@
-.body {
-	background-color: var(--light);
-}
+
 
 .safari:not(.no-safari-overflow-x-fix) .body {
 	overflow-x: hidden;
@@ -11,12 +9,13 @@
 	}
 
 .container {
-	position: relative;
+		max-width: 90%;
+		margin: auto;
 }
-
-.container {
-		width: 100%;
+	.row {
+		margin-bottom: 40px;
 	}
+	
 
 .header-column .header-extra-info li .feature-box p {
 	margin: 0;
@@ -592,4 +591,108 @@ p strong {
 }
 .cicatrices-block {
     animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ======================= */
+/*  Fondo completamente oscuro en toda la página */
+/* ======================= */
+body {
+    background: #000 !important;
+    color: #f5f5f5 !important;
+}
+.feature-box-info h4 {
+    color: #ff4444 !important;
+}
+.feature-box-info p {
+    color: #dcdcdc !important;
+}
+
+/* ======================= */
+/*  Ajuste del título principal y mensaje final */
+/* ======================= */
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.5);
+}
+
+.container.text-center.mt-5 h2 {
+    font-size: 2rem !important;
+    font-weight: bold !important;
+    color: #ff0000 !important;
+    text-transform: uppercase !important;
+}
+
+.feature-box-icon i {
+    color: #ff4444 !important;
+    font-size: 3.5rem !important;
+}
+.feature-box {
+    border-left: 5px solid #ff4444;
+    padding-left: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+/* ======================= */
+/*  Mejoras en el título de la sección de datos de la guerra */
+/* ======================= */
+.datos-guerra h1, .datos-guerra h2 {
+    font-family: 'Bebas Neue', sans-serif !important;
+    font-size: 3.5rem !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+    text-shadow: 4px 4px 15px rgba(255, 0, 0, 0.8) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+}
+
+/* ======================= */
+/*  Cambio de iconos solo en la sección de datos de la guerra */
+/* ======================= */
+.datos-guerra .fosas-comunes .feature-box-icon i:before { content: '\f5e1'; } /* Icono de lápida */
+.datos-guerra .hambruna .feature-box-icon i:before { content: '\f7c7'; } /* Icono de pan partido */
+.datos-guerra .colapso-del-orden .feature-box-icon i:before { content: '\f83d'; } /* Icono de explosión */
+.datos-guerra .escasez-de-agua .feature-box-icon i:before { content: '\f773'; } /* Icono de gota seca */
+.datos-guerra .campos-de-refugiados .feature-box-icon i:before { content: '\f6c0'; } /* Icono de tienda de campaña */
+.datos-guerra .esclavitud .feature-box-icon i:before { content: '\f502'; } /* Icono de cadenas rotas */
+
+/* ======================= */
+/*  Ajuste del tamaño y color de los iconos solo en la sección de datos de la guerra */
+/* ======================= */
+.datos-guerra .feature-box-icon i {
+    font-size: 4rem !important;
+    color: #ff0000 !important;
+}
+
+/* ======================= */
+/*  Cambio de iconos solo en la sección de datos de la guerra */
+/* ======================= */
+.datos-guerra .fosas-comunes .feature-box-icon i:before { content: '\f6b7' !important; } /* Icono de tumba (FontAwesome) */
+.datos-guerra .hambruna .feature-box-icon i:before { content: '\f818' !important; } /* Icono de plato vacío */
+.datos-guerra .colapso-del-orden .feature-box-icon i:before { content: '\f0e7' !important; } /* Icono de relámpago (caos) */
+.datos-guerra .escasez-de-agua .feature-box-icon i:before { content: '\f043' !important; } /* Icono de gota de agua */
+.datos-guerra .campos-de-refugiados .feature-box-icon i:before { content: '\f6bb' !important; } /* Icono de refugio */
+.datos-guerra .esclavitud .feature-box-icon i:before { content: '\f6d0' !important; } /* Icono de cadenas rotas */
+
+/* ======================= */
+/*  Ajuste del tamaño y color de los iconos solo en la sección de datos de la guerra */
+/* ======================= */
+.datos-guerra .feature-box-icon i {
+    font-size: 4rem !important;
+    color: #ff0000 !important;
+}
+
+/* ======================= */
+/*  Reducir tamaño del título en la sección de datos de la guerra */
+/* ======================= */
+.datos-guerra h1, .datos-guerra h2 {
+    font-size: 2.8rem !important;
+    text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.6) !important;
+}
+
+/* ======================= */
+/*  Reducir tamaño de los iconos en la sección de datos de la guerra */
+/* ======================= */
+.datos-guerra .feature-box-icon i {
+    font-size: 2.5rem !important;
 }
