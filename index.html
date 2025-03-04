@@ -54,23 +54,23 @@
 <body data-plugin-page-transition>
 	<div class="body">
 		<!-- Main -->
-		<div role="main" class="main">
+		<div role="main" class="main" id="main">
 			<!-- Vídeo  -->
-			<section class="section border-0 video overlay overlay-show overlay-op-8 m-0"
-				style="height: 100vh; position: relative; overflow: hidden;">
-				<!-- Contenido principal -->
-				<div class="container position-relative z-index-3 h-100">
-					<div class="row align-items-center h-100">
-						<div class="col">
-							<div class="d-flex flex-column align-items-center justify-content-center h-100">
-								<!-- Botón para iniciar el video -->
-								<button id="openVideoModal" class="btn-play">
-									<i class="fa-solid fa-play"></i>
-								</button>
+			<section class="video-background-section">
+				<!-- Video de fondo -->
+				<video class="background-video" autoplay muted loop playsinline>
+					<source src="video/video_opt.mp4" type="video/mp4">
+					Tu navegador no soporta videos en HTML5.
+				</video>
 
-							</div>
-						</div>
-					</div>
+				<!-- Capa de oscurecimiento -->
+				<div class="video-overlay"></div>
+
+				<!-- Contenido de la sección -->
+				<div class="video-content">
+					<button id="openVideoModal" class="btn-play">
+						<i class="fa-solid fa-play"></i>
+					</button>
 				</div>
 			</section>
 
@@ -78,7 +78,7 @@
 			<div id="videoModal" class="video-modal">
 				<div class="video-modal-content">
 					<video id="modalVideo" autoplay muted controls>
-						<source src="video/video_opt.mp4" type="video/mp4">
+						<source src="video/p3.mp4" type="video/mp4">
 						Tu navegador no soporta videos en HTML5.
 					</video>
 				</div>
@@ -122,7 +122,7 @@
 
 			<!-- Sección de datos de la guerra -->
 			<section>
-				<div class="container datos-guerra" id="main">
+				<div class="container datos-guerra">
 					<div class="row text-center pt-5 pb-4 mt-5 mb-4">
 						<div class="col-md-10 mx-md-auto">
 							<h1 class="word-rotator slide font-weight-bold text-8 mb-3 appear-animation"
@@ -325,6 +325,14 @@
 	<!-- Theme Initialization Files -->
 	<script src="js/theme.init.js"></script>
 
+	<!-- Script para que el video sea lo primero que se muestre -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			setTimeout(() => {
+				window.scrollTo(0, 0);
+			}, 100); // Pequeño retraso para asegurar compatibilidad
+		});
+	</script>
 </body>
 
 </html>
