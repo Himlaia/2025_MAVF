@@ -298,3 +298,30 @@ html {
     50% { opacity: 0.8; }
     100% { opacity: 1; }
 }
+
+/* Reducir toda la sección de datos de guerra al 90% */
+.seccion-datos-guerra {
+    transform: scale(0.9);
+    transform-origin: center;
+}
+
+/* Ajuste opcional: reducir márgenes para mantener alineación */
+.seccion-datos-guerra {
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.separador {
+    width: 80%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3); /* Gris oscuro translúcido */
+    margin: 20px auto;
+}
+
+/* Reducir los márgenes entre secciones */
+.section {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
