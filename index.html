@@ -54,23 +54,23 @@
 <body data-plugin-page-transition>
 	<div class="body">
 		<!-- Main -->
-		<div role="main" class="main">
+		<div role="main" class="main" id="main">
 			<!-- Vídeo  -->
-			<section class="section border-0 video overlay overlay-show overlay-op-8 m-0"
-				style="height: 100vh; position: relative; overflow: hidden;">
-				<!-- Contenido principal -->
-				<div class="container position-relative z-index-3 h-100">
-					<div class="row align-items-center h-100">
-						<div class="col">
-							<div class="d-flex flex-column align-items-center justify-content-center h-100">
-								<!-- Botón para iniciar el video -->
-								<button id="openVideoModal" class="btn-play">
-									<i class="fa-solid fa-play"></i>
-								</button>
+			<section class="video-background-section">
+				<!-- Video de fondo -->
+				<video class="background-video" autoplay muted loop playsinline>
+					<source src="video/video_opt.mp4" type="video/mp4">
+					Tu navegador no soporta videos en HTML5.
+				</video>
 
-							</div>
-						</div>
-					</div>
+				<!-- Capa de oscurecimiento -->
+				<div class="video-overlay"></div>
+
+				<!-- Contenido de la sección -->
+				<div class="video-content">
+					<button id="openVideoModal" class="btn-play">
+						<i class="fa-solid fa-play"></i>
+					</button>
 				</div>
 			</section>
 
@@ -78,7 +78,7 @@
 			<div id="videoModal" class="video-modal">
 				<div class="video-modal-content">
 					<video id="modalVideo" autoplay muted controls>
-						<source src="video/video_opt.mp4" type="video/mp4">
+						<source src="video/p3.mp4" type="video/mp4">
 						Tu navegador no soporta videos en HTML5.
 					</video>
 				</div>
@@ -122,22 +122,19 @@
 
 			<!-- Sección de datos de la guerra -->
 			<section>
-				<div class="container datos-guerra" id="main">
-					<div class="row text-center pt-5 pb-4 mt-5 mb-4">
-						<div class="col-md-10 mx-md-auto">
-							<h1 class="word-rotator slide font-weight-bold text-8 mb-3 appear-animation"
-								data-appear-animation="fadeInUpShorter">
-								Esto no es historia. Esto sigue ocurriendo.
-							</h1>
-						</div>
-					</div>
+				<div class="container text-center mt-5">
+					<h1 class="font-weight-bold text-danger text-uppercase" data-appear-animation="fadeInDownShorter"
+					data-appear-animation-delay="300">
+						Esto no es una historia. No es ficción.<br>Ya ha ocurrido. Volverá a ocurrir.
+					</h1>
+				</div>
+				<div class="seccion-datos-guerra">
 					<div class="row mb-lg-4">
 						<div class="col-lg-4 appear-animation" data-appear-animation="fadeInLeftShorter"
 							data-appear-animation-delay="300">
 							<div class="feature-box feature-box-style-2">
-								<div class="feature-box-icon">
+								<div class="icono">
 									<i class="fa-solid fa-cross"></i>
-
 								</div>
 								<div class="feature-box-info">
 									<h4 class="font-weight-bold mb-2">Fosas comunes</h4>
@@ -150,7 +147,7 @@
 						</div>
 						<div class="col-lg-4 appear-animation" data-appear-animation="fadeInUpShorter">
 							<div class="feature-box feature-box-style-2">
-								<div class="feature-box-icon">
+								<div class="icono">
 									<i class="fa-solid fa-bowl-food"></i>
 								</div>
 								<div class="feature-box-info">
@@ -166,7 +163,7 @@
 						<div class="col-lg-4 appear-animation" data-appear-animation="fadeInRightShorter"
 							data-appear-animation-delay="300">
 							<div class="feature-box feature-box-style-2">
-								<div class="feature-box-icon">
+								<div class="icono">
 									<i class="fa-solid fa-bolt"></i>
 								</div>
 								<div class="feature-box-info">
@@ -183,7 +180,7 @@
 						<div class="col-lg-4 appear-animation" data-appear-animation="fadeInLeftShorter"
 							data-appear-animation-delay="300">
 							<div class="feature-box feature-box-style-2">
-								<div class="feature-box-icon">
+								<div class="icono">
 									<i class="fa-solid fa-droplet"></i>
 								</div>
 								<div class="feature-box-info">
@@ -198,7 +195,7 @@
 						</div>
 						<div class="col-lg-4 appear-animation" data-appear-animation="fadeInUpShorter">
 							<div class="feature-box feature-box-style-2">
-								<div class="feature-box-icon">
+								<div class="icono">
 									<i class="fa-solid fa-campground"></i>
 								</div>
 								<div class="feature-box-info">
@@ -213,7 +210,7 @@
 						<div class="col-lg-4 appear-animation" data-appear-animation="fadeInRightShorter"
 							data-appear-animation-delay="300">
 							<div class="feature-box feature-box-style-2">
-								<div class="feature-box-icon">
+								<div class="icono">
 									<i class="fa-solid fa-handcuffs"></i>
 								</div>
 								<div class="feature-box-info">
@@ -227,15 +224,12 @@
 								</div>
 							</div>
 						</div>
-						<div class="container text-center mt-5">
-							<h2 class="font-weight-bold text-danger text-uppercase">
-								Esto no es una historia. No es ficción.<br>Ya ha ocurrido. Volverá a ocurrir.
-							</h2>
-						</div>
 					</div>
 				</div>
 			</section>
-
+			
+			<div class="separador"></div>
+			
 			<!-- Sección de estadísticas -->
 			<section class="section bg-dark border-0 m-0">
 				<div class="container">
@@ -324,7 +318,6 @@
 
 	<!-- Theme Initialization Files -->
 	<script src="js/theme.init.js"></script>
-
 </body>
 
 </html>
