@@ -48,7 +48,7 @@
 }
 
 .muertos {
-    color: #9a0000 !important; /* Rojo intenso */
+    color: #cb0000 !important; /* Rojo intenso */
     font-size: 3rem;
     font-weight: bold;
     font-style: italic;
@@ -353,4 +353,37 @@ html {
     min-width: 35px; /* Mantiene alineación */
     text-align: left;
     margin-left: 12px; /* Espacio entre la barra y el porcentaje */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 90vw; /* Ajusta según el tamaño deseado */
+    max-height: 90vh; /* Mantiene márgenes respecto a la pantalla */
+    overflow: visible; /* Permite que los subtítulos sean visibles */
+    border-radius: 15px; /* Mantiene el estilo redondeado */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Evita que el video se recorte */
+}
+
+.video-modal-content {
+    width: 98%; /* Casi toda la pantalla */
+    max-width: 1200px; /* Permite mayor tamaño en pantallas grandes */
+    height: auto;
+     background: black;
+    padding: 8px; /* Pequeño margen negro para el efecto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px; /* Mantiene bordes suaves */
+}
+
+.video-modal-content video {
+    width: 100%;
+    height: auto; /* Mantiene la proporción del video */
 }
