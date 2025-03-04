@@ -57,48 +57,73 @@
 		<div role="main" class="main">
 			<!-- Vídeo  -->
 			<section class="section border-0 video overlay overlay-show overlay-op-8 m-0"
-				data-video-path="video/memory-of-a-woman" data-plugin-video-background
-				data-plugin-options="{'posterType': 'jpg', 'position': '50% 50%'}" style="height: 100vh;">
+				style="height: 100vh; position: relative; overflow: hidden;">
+				<!-- Contenido principal -->
 				<div class="container position-relative z-index-3 h-100">
 					<div class="row align-items-center h-100">
 						<div class="col">
 							<div class="d-flex flex-column align-items-center justify-content-center h-100">
-								<h1 class="position-relative text-color-light text-5 line-height-5 font-weight-medium px-4 mb-2 appear-animation"
-									data-appear-animation="fadeInDownShorterPlus"
-									data-plugin-options="{'minWindowWidth': 0}">
-									<span class="position-absolute right-100pct top-50pct transform3dy-n50 opacity-3">
-										<img src="img/slides/slide-title-border-light.png"
-											class="w-auto appear-animation" data-appear-animation="fadeInRightShorter"
-											data-appear-animation-delay="250"
-											data-plugin-options="{'minWindowWidth': 0}" alt="" />
-									</span>
-									GET READY TO <span class="position-relative">SEE<span
-											class="position-absolute left-50pct transform3dx-n50 top-0 mt-3"></span></span>
-									<span class="position-absolute left-100pct top-50pct transform3dy-n50 opacity-3">
-										<img src="img/slides/slide-title-border-light.png"
-											class="w-auto appear-animation" data-appear-animation="fadeInLeftShorter"
-											data-appear-animation-delay="250"
-											data-plugin-options="{'minWindowWidth': 0}" alt="" />
-									</span>
-								</h1>
-								<h1 class="text-color-light font-weight-extra-bold text-12 line-height-1 mb-2 appear-animation"
-									data-appear-animation="blurIn" data-appear-animation-delay="1000"
-									data-plugin-options="{'minWindowWidth': 0}">PERFECT VIDEOS</h1>
-								<p class="text-4 text-color-light font-weight-light opacity-7 mb-0"
-									data-plugin-animated-letters
-									data-plugin-options="{'startDelay': 2000, 'minWindowWidth': 0}">Check out our
-									options and features</p>
+								<!-- Botón para iniciar el video -->
+								<button id="openVideoModal" class="btn-play">
+									<i class="fa-solid fa-play"></i>
+								</button>
+
 							</div>
 						</div>
 					</div>
-					<a href="#main" class="slider-scroll-button position-absolute bottom-10 left-50pct transform3dx-n50"
-						data-hash data-hash-offset="0" data-hash-offset-lg="80">Deslizar abajo</a>
 				</div>
 			</section>
 
+			<!-- Modal con el video -->
+			<div id="videoModal" class="video-modal">
+				<div class="video-modal-content">
+					<video id="modalVideo" autoplay muted controls>
+						<source src="video/video_opt.mp4" type="video/mp4">
+						Tu navegador no soporta videos en HTML5.
+					</video>
+				</div>
+			</div>
+
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+					var openBtn = document.getElementById('openVideoModal');
+					var modal = document.getElementById('videoModal');
+					var video = document.getElementById('modalVideo');
+
+					if (openBtn && modal && video) {
+						// Abrir el modal y reproducir el video
+						openBtn.addEventListener('click', function (event) {
+							event.preventDefault();
+							modal.style.display = "flex";
+							video.currentTime = 0; // Reiniciar el video
+							video.play();
+						});
+
+						// Cerrar modal si el usuario hace clic fuera del video
+						modal.addEventListener('click', function (event) {
+							if (event.target === modal) {
+								modal.style.display = "none";
+								video.pause();
+							}
+						});
+
+						// Cerrar modal si el usuario presiona "Esc"
+						document.addEventListener('keydown', function (event) {
+							if (event.key === "Escape") {
+								modal.style.display = "none";
+								video.pause();
+							}
+						});
+					} else {
+						console.error("Uno o más elementos del modal no fueron encontrados.");
+					}
+				});
+			</script>
+
 			<!-- Sección de datos de la guerra -->
 			<section>
-<div class="container datos-guerra" id="main">					<div class="row text-center pt-5 pb-4 mt-5 mb-4">
+				<div class="container datos-guerra" id="main">
+					<div class="row text-center pt-5 pb-4 mt-5 mb-4">
 						<div class="col-md-10 mx-md-auto">
 							<h1 class="word-rotator slide font-weight-bold text-8 mb-3 appear-animation"
 								data-appear-animation="fadeInUpShorter">

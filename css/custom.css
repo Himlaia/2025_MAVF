@@ -94,3 +94,103 @@
     75% { transform: translate(-1px, -1px); }
     100% { transform: translate(1px, 1px); }
 }
+
+#videoContainer {
+    position: fixed; /* Fijar el video en toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2; /* Asegurar que se muestre sobre otros elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black; /* Evitar bordes blancos en diferentes resoluciones */
+}
+
+#playableVideo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Asegurar que el video cubra toda la pantalla */
+}
+
+.container {
+    position: relative;
+    z-index: 3; /* Asegurar que esté sobre el video */
+}
+
+.slider-scroll-button {
+    bottom: 20px !important; /* Asegurar que no se corte */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+/* ======================= */
+/*  Ajustes del modal del video */
+/* ======================= */
+/* Estilo del modal */
+.video-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del video más grande */
+.video-modal-content {
+    position: relative;
+    width: 90vw;  /* Aumentamos el ancho */
+    max-width: 1400px; /* Máximo tamaño en pantallas grandes */
+    height: 85vh;  /* Aumentamos la altura */
+    background: black;
+    padding: 0;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3); /* Sombra más visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajuste del video dentro del modal */
+.video-modal video {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover; /* Asegurar que se ajuste correctamente */
+}
+
+/* Estilo del botón de Play */
+.btn-play {
+    background: rgba(255, 255, 255, 0.2); /* Botón transparente */
+    border: 2px solid white;
+    color: white;
+    font-size: 2rem; /* Tamaño del icono */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Botón circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto hover */
+.btn-play:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Ajustar la posición del botón */
+.btn-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
