@@ -1,0 +1,23 @@
+xml version=1.0 encoding=UTF-8
+urlset xmlns=httpwww.sitemaps.orgschemassitemap0.9
+    url
+        lochttpshimlaia.github.io2025_MAVFloc
+        lastmod2024-03-03lastmod
+        priority1.0priority
+    url
+    url
+        lochttpshimlaia.github.io2025_MAVFdatos-de-guerraloc
+        lastmod2024-03-03lastmod
+        priority0.8priority
+    url
+    url
+        lochttpshimlaia.github.io2025_MAVFposguerraloc
+        lastmod2024-03-03lastmod
+        priority0.8priority
+    url
+    url
+        lochttpshimlaia.github.io2025_MAVFcontactoloc
+        lastmod2024-03-03lastmod
+        priority0.5priority
+    url
+urlset
