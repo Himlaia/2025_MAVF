@@ -3,7 +3,7 @@
 ## Descripción
 **2025 MAVF** es una página web diseñada para mostrar de manera impactante y realista las devastadoras consecuencias de la guerra. A través de imágenes, datos visuales y animaciones, se busca concienciar sobre el impacto de los conflictos bélicos en la sociedad y el mundo.
 
-🌍 **Live Demo:** [Visita el sitio web](https://himlaia.github.io/2025_MAVF/)
+**Live Demo:** [Visita el sitio web](https://himlaia.github.io/2025_MAVF/)
 
 ---
 
